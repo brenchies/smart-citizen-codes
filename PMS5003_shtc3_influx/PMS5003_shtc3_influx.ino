@@ -15,8 +15,15 @@ Adafruit_SHT31 sht31 = Adafruit_SHT31();
 #define INFLUXDB_HOST "188.226.154.151"
 #define INFLUXDB_USER "brenchies"
 #define INFLUXDB_PASS "pastechi"
+#define INFLUXDB_DB "pastechi"
+
+#define INFLUXDB_ROW "Particles"
+#define INFLUXDB_DEVICE "alpha"
+
 #define WIFI_SSID "hs-01"
 #define WIFI_PASS "4EmployeesOnly100%"
+
+#define SLEEPTIME 3e6
 
 ESP8266WiFiMulti WiFiMulti;
 Influxdb influx(INFLUXDB_HOST);
@@ -68,7 +75,7 @@ void setup() {
 
   pinMode(shutdownpin, OUTPUT);           // set pin to input
   digitalWrite(shutdownpin, HIGH);
-  delay(30000);
+  delay(40000);
 }
 
 char a;
@@ -169,12 +176,12 @@ void loop() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 
-  influx.setDbAuth("pastechi", INFLUXDB_USER, INFLUXDB_PASS);
+  influx.setDbAuth(INFLUXDB_DB, INFLUXDB_USER, INFLUXDB_PASS);
 
   Serial.println("Setup done");
 
-    InfluxData row("Particles");
-    row.addTag("device", "alpha");
+    InfluxData row(INFLUXDB_ROW);
+    row.addTag("device", INFLUXDB_DEVICE);
     row.addTag("sensor", "one");
     row.addTag("mode", "pwm");
     row.addValue("pm01", PM01Value);
@@ -188,7 +195,7 @@ void loop() {
     
     dataready = false;
 
-    ESP.deepSleep(30e6);
+    ESP.deepSleep(SLEEPTIME);
     
   }
  
