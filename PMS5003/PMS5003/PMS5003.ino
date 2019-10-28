@@ -9,11 +9,11 @@
 #include <ESP8266WiFiMulti.h>
 #include <InfluxDb.h>
 
-#define INFLUXDB_HOST "181.41.8.107"
-#define INFLUXDB_USER "admin"
-#define INFLUXDB_PASS "pastechi"
-#define WIFI_SSID "hs-01"
-#define WIFI_PASS "4EmployeesOnly100%"
+#define INFLUXDB_HOST "192.168.0.0"
+#define INFLUXDB_USER "user"
+#define INFLUXDB_PASS "pass"
+#define WIFI_SSID "ssid"
+#define WIFI_PASS "password"
 
 ESP8266WiFiMulti WiFiMulti;
 Influxdb influx(INFLUXDB_HOST);
