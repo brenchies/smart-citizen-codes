@@ -12,10 +12,10 @@
 
 Adafruit_SHT31 sht31 = Adafruit_SHT31();
 
-#define INFLUXDB_HOST "188.226.154.151"
-#define INFLUXDB_USER "brenchies"
-#define INFLUXDB_PASS "pastechi"
-#define INFLUXDB_DB "pastechi"
+#define INFLUXDB_HOST "192.168.0.0"
+#define INFLUXDB_USER "user"
+#define INFLUXDB_PASS "pass"
+#define INFLUXDB_DB "db"
 
 #define INFLUXDB_ROW "Particles"
 #define INFLUXDB_DEVICE "alpha"
