@@ -14,8 +14,8 @@ Adafruit_MPL3115A2 baro = Adafruit_MPL3115A2();
 
 
 //SSID and Password of your WiFi router
-const char* ssid = "hs-01";
-const char* password = "4EmployeesOnly100%";
+const char* ssid = "ssid";
+const char* password = "password";
 #define bh1730 0x29 
 
 
