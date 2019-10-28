@@ -20,8 +20,8 @@ Adafruit_SHT31 sht31 = Adafruit_SHT31();
 #define INFLUXDB_ROW "Particles"
 #define INFLUXDB_DEVICE "alpha"
 
-#define WIFI_SSID "hs-01"
-#define WIFI_PASS "4EmployeesOnly100%"
+#define WIFI_SSID "ssid"
+#define WIFI_PASS "password"
 
 #define SLEEPTIME 3e6
 
