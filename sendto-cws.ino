@@ -1,8 +1,8 @@
 #include "ESP8266WiFi.h"
 
 // WiFi parameters 
-const char* ssid = "Brenchies_Lab"; 
-const char* password = "Rietveld0"; 
+const char* ssid = "ssid"; 
+const char* password = "pass"; 
 String thingName="thedata.php?unitid=2&"; //thing for grouping all the data together 
 //const char* host = "dweet.io"; //host :) for tcp connection
 const char* host = "caribbeanwebsolutions.com"; //host :) for tcp connection
